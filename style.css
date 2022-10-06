@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root {
+    --color1: #2c3333;
+    --color2: #395b64;
+    --color3: #a5c9ca;
+    --color4: #e7f6f2;
+}
+
+/** {
+    border: 1px solid red;
+}*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color1);
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+p::selection,
+h1::selection,
+span::selection{
+    background: none;
+}
+/************************* NAVBAR ***********************/
+nav {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    padding: 20px 50px;
+    background: var(--color1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: inset 0px -2px 0px var(--color4);
+}
+
+.nav-right {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+#copy {
+    font-size: 1rem;
+}
+
+.nav-right span {
+    background-image: linear-gradient(
+        -225deg,
+        var(--color2) 0%,
+        var(--color3) 25%,
+        var(--color4) 50%,
+        var(--color3) 75%,
+        var(--color2) 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: var(--color1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.nav-center {
+    display: flex;
+}
+
+.nav-center ul {
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-content: space-around;
+}
+
+.nav-center li {
+    list-style: none;
+    color: var(--color3);
+    cursor: pointer;
+    text-align: center;
+    transition: 0.1s;
+}
+
+.nav-center li:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 2px;
+    bottom: 0;
+    left: -10%;
+    background: var(--color4);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+
+.nav-center li:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 2px;
+    bottom: 0;
+    left: -10%;
+    background: var(--color4);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+
+.nav-center li:nth-child(3)::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 2px;
+    bottom: 0;
+    left: -10%;
+    background: var(--color4);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+
+.nav-center li:nth-child(4)::after{
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 2px;
+    bottom: 0;
+    left: -10%;
+    background: var(--color4);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in-out;
+}
+
+.nav-center li:nth-child(1)::after:hover{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-left button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    width: 25%;
+    height: 50%;
+    border: 2px solid var(--color3);
+    border-radius: 15px;
+    background: var(--color1);
+    color: var(--color3);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.nav-center li:nth-child(1):hover{
+    transform: scale(1.1);
+    color: var(--color4);
+}
+
+.nav-center li:nth-child(2):hover{
+    transform: scale(1.1);
+    color: var(--color4);
+}
+
+.nav-center li:nth-child(3):hover{
+    transform: scale(1.1);
+    color: var(--color4);
+}
+
+.nav-center li:nth-child(4):hover{
+    transform: scale(1.1);
+    color: var(--color4);
+}
+
+.nav-left button:hover{
+    border: 3px solid var(--color4);
+    color: var(--color4);
+    transform: scale(1.1);
+}
+
+/************************* SCROLLING ***********************/
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/************************* INTRO ***********************/
+
+.intro-header {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background: url(/Assets/impression3d-rev3-site.png);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    margin-top: 350px;
+    margin-bottom: 350px;
+    width: 100%;
+}
+
+.intro h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--color4);
+    text-shadow: 
+    0 0.5px var(--color1),
+    0 -0.5px var(--color1),
+    0.5px 0 var(--color1),
+    -0.5px 0 var(--color1);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+
+}
+
+.intro p {
+    margin: 0 10%;
+}
+
+/************************* NEWS ***********************/
+
+.news-preview {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: var(--color4);
+    scroll-snap-align: center;
+}
+
+.news-header {
+    display: flex;
+    width: 95%;
+    height: 15%;
+    padding-top: 150px;
+    padding-left: 5%;
+}
+
+.news-header h2 {
+    color: var(--color1);
+    font-size: 2rem;
+    display: flex;
+    width: 80%;
+}
+
+.news-header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 7%;
+    height: 20%;
+    border: 2px solid var(--color1);
+    border-radius: 15px;
+    background: var(--color4);
+    color: var(--color1);
+    font-size: 1rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.news-header button:hover{
+    transform: scale(1.1);
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 80%;
+    justify-content: space-between;
+    padding-left: 5%;
+}
+
+.news-item  {
+    border: 3px solid var(--color1);
+    border-radius: 15px;
+}
+/************************* SHOP ***********************/
+
+.shop-preview {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: var(--color3);
+    scroll-snap-align: center;
+}
+
+/************************* CONTACT ***********************/
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: var(--color2);
+    scroll-snap-align: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    padding-top: 150px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-left: 5%;
+}
+
+.contact-container h3 {
+    color: var(--color4);
+    font-size: 1.8rem;
+}
+
+.contact-container p {
+    color: var(--color3);
+    padding-right: 15%;
+    font-size: 1rem;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'i1 i2 '
+    'ta ta '
+    'tx tx '
+    'bt bt ';
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
+input,
+textarea {
+    margin: 5px;
+    height: 45px;
+    border: 2px solid var(--color4);
+    background: var(--color2);
+    color: var(--color4);
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    color: var(--color4);
+}
+
+#firstname {
+    grid-area: i1;
+}
+
+#lastname {
+    grid-area: i2;
+}
+
+#email {
+    grid-area: ta;
+}
+
+#comment {
+    grid-area: tx;
+}
+
+input[type='submit'] {
+    grid-area: bt;
+}
+
+.footer {
+    background: var(--color1);
+    display: flex;
+    bottom: 0;
+    padding: 5%;
+}
