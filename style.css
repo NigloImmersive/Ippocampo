@@ -200,6 +200,7 @@ nav {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    justify-content: center;
 }
 
 /************************* INTRO ***********************/
@@ -290,16 +291,32 @@ nav {
 }
 
 .news-container {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+    display: flex;
     width: 80%;
-    justify-content: space-between;
+    justify-content: center;
     padding-left: 5%;
+    padding-right: 5%;
 }
 
 .news-item  {
     border: 3px solid var(--color1);
     border-radius: 15px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.news-item-title {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.news-item-resume{
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 /************************* SHOP ***********************/
 
@@ -397,8 +414,15 @@ input[type='submit'] {
 }
 
 .footer {
-    background: var(--color1);
     display: flex;
+    width: 100%;
+}
+
+.footer-bg {
+    display: flex;
+    width: 100%;
     bottom: 0;
-    padding: 5%;
+    padding-top: 5%;
+    background: var(--color1);
+    z-index: 0;
 }
